@@ -19,6 +19,7 @@
             "polyfills": "projects/angularElements/src/polyfills.ts",
             "tsConfig": "projects/angularElements/tsconfig.app.json",
             "aot": true,
+            "singleBundle": true,
             "assets": [
               "projects/angularElements/src/favicon.ico",
               "projects/angularElements/src/assets"
@@ -136,6 +137,7 @@
             "polyfills": "projects/renderComponentCE/src/polyfills.ts",
             "tsConfig": "projects/renderComponentCE/tsconfig.app.json",
             "aot": true,
+            "singleBundle": true,
             "assets": [
               "projects/renderComponentCE/src/favicon.ico",
               "projects/renderComponentCE/src/assets"
