@@ -56,6 +56,19 @@
 
   </div>
 
+
+  <div *ngIf="true">
+    Common directives included
+  </div>
+  <button (click)="manualTrigger()">Manual trigger</button>
+  <div *appCdTest="change; let t">
+    Change detection from component ran!
+
+    <p> Implicit set from directive with value: {{ t }}</p>
+
+
+  </div>
+
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>

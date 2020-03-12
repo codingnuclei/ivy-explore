@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, NgModule, ɵdetectChanges } from '@angular/core';
+import { Component, NgModule, ViewEncapsulation, ɵdetectChanges } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CdTestDirective } from './directives/cd-test.directive';
 
