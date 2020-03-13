@@ -10,7 +10,7 @@ export class CdTestDirective {
     if (!condition && !this.hasView) {
       this.view = this.viewContainer.createEmbeddedView(this.templateRef);
       this.hasView = true;
-
+      this.view.context['$implicit'] = 'Loading value from mock service...';
       setTimeout(() => {
         this.view.context['$implicit'] = `${Math.random()}`;
         this.cdr.markForCheck();
