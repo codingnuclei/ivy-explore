@@ -1,6 +1,10 @@
-# Test
+# IVY-EXPLORE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+This workspace was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+
+It has projects that explore how we can use IVY to get the most out of Angular.
+
+Many of the projects use private APIs, and as such are subject to breaking changes.  Use in production is at your own risk!
 
 ## Development server
 

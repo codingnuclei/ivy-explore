@@ -3,14 +3,14 @@ import {
   ComponentFactory,
   ComponentFactoryResolver,
   Injector,
+  RendererFactory2,
   Type,
   ViewRef,
   ɵNG_COMP_DEF,
-  ɵRender3ComponentFactory,
-  RendererFactory2
+  ɵRender3ComponentFactory
 } from '@angular/core';
 import { createCustomElement, NgElementConfig, NgElementConstructor } from '@angular/elements';
-import { ɵDomRendererFactory2, EventManager, ɵDomEventsPlugin, ɵDomSharedStylesHost } from '@angular/platform-browser';
+import { EventManager, ɵDomEventsPlugin, ɵDomRendererFactory2, ɵDomSharedStylesHost } from '@angular/platform-browser';
 
 class IvyComponentFactoryResolver extends ComponentFactoryResolver {
   resolveComponentFactory<T>(component: Type<T>): ComponentFactory<T> {
@@ -22,10 +22,8 @@ class NoopApplicationRef {
   attachView(_viewRef: ViewRef): void {}
 }
 
-export function createCustomIvyElement<P>(component: Type<any>, config?: NgElementConfig): NgElementConstructor<P> {
-  if (!config) {
-    config = { injector: Injector.NULL };
-  }
+export function createCustomIvyElement<P>(component: Type<any>, config2?: NgElementConfig): NgElementConstructor<P> {
+  const config = { injector: Injector.NULL };
 
   config.injector = Injector.create({
     name: 'IvyElmentInjector',

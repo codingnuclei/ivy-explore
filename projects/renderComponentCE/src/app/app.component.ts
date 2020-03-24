@@ -20,7 +20,7 @@ import { CdTestDirective } from './directives/cd-test.directive';
   // https://github.com/angular/angular/blob/master/packages/core/src/render3/interfaces/view.ts#L330
   // changeDetection: 32
 })
-export class AppComponent implements DoCheck, OnInit {
+export class AppComponent {
   title = 'renderComponentCE';
 
   change = true;
@@ -37,7 +37,7 @@ export class AppComponent implements DoCheck, OnInit {
 
     // we add to as an IVY feature???
     // @ts-ignore
-    this.cdr.__proto__.markForCheck = () => ɵmarkDirty(this);
+    // this.cdr.__proto__.markForCheck = () => ɵmarkDirty(this);
 
     setTimeout(() => {
       this.change = false;
@@ -45,16 +45,8 @@ export class AppComponent implements DoCheck, OnInit {
     }, 2000);
   }
 
-  ngOnInit() {
-    console.log('ngOnInit');
-  }
-
   manualTrigger() {
     ɵdetectChanges(this);
-  }
-
-  ngDoCheck() {
-    console.log('ngDoCheck');
   }
 }
 

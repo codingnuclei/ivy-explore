@@ -1,4 +1,4 @@
-import { Directive, TemplateRef, ViewContainerRef, Input, EmbeddedViewRef, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appCdTest]'
