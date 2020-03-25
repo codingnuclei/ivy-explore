@@ -26,7 +26,6 @@
 </div>
 
 <div class="content" role="main">
-
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
 
@@ -72,6 +71,10 @@
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
+  <slot name="header">TEST</slot>
+  <app-nested-component>
+    <span>Projected into child component</span>
+  </app-nested-component>
 
   <div class="card-container">
     <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">

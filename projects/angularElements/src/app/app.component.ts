@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, NgModule, ViewEncapsulation, ɵdetectChanges, ɵmarkDirty } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CdTestDirective } from './directives/cd-test.directive';
+import { NestedComponentComponent } from './nested-component/nested-component.component';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,7 @@ export class AppComponent {
 }
 
 @NgModule({
-  declarations: [AppComponent, CdTestDirective],
+  declarations: [AppComponent, CdTestDirective, NestedComponentComponent],
   imports: [BrowserModule],
   providers: []
 })
